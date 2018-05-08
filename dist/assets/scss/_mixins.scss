@@ -1,0 +1,6 @@
+@mixin modal-animate($dir) {
+    -webkit-transition: opacity 0.3s linear, $dir 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, $dir 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, $dir 0.3s ease-out;
+    transition: opacity 0.3s linear, $dir 0.3s ease-out;
+}
