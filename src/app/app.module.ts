@@ -7,16 +7,18 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard-component';
 import { AppBootstrapModule } from './app.bootstrap.module';
+import {DndModule} from 'ng2-dnd';
 
+// import { SidebarModule } from 'ng-sidebar';
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent, SidebarComponent, DashboardComponent
+    AppComponent,HeaderComponent, DashboardComponent, SidebarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppBootstrapModule
+    AppBootstrapModule,DndModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

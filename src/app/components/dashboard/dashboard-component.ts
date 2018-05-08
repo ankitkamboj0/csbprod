@@ -7,10 +7,18 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 })
 
 export class DashboardComponent{
+    bsValue = new Date();
+    bsRangeValue: Date[];
+    maxDate = new Date();
+    simpleDrop: any = null;
     public modalRef: BsModalRef; // {1}
-    constructor(private modalService: BsModalService) {} // {2}
-
+    constructor(private modalService: BsModalService) {
+        this.maxDate.setDate(this.maxDate.getDate() + 7);
+        this.bsRangeValue = [this.bsValue, this.maxDate];
+    } // {2}
+    
     public openModal(template: TemplateRef<any>) {
-        this.modalRef = this.modalService.show(template,Object.assign({}, { class: 'modal right' })); // {3}
+        this.modalRef = this.modalService.show(template,Object.assign({}, { class: 'modal-lg modal-right' })); // {3}
   }
+  
 }
